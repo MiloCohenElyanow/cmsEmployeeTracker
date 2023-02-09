@@ -1,6 +1,6 @@
-import {dbTunnel} from "../db/connect.js";
+// import {dbTunnel} from "../db/connect.js";
+const {dbTunnel} = require("../db/connect.js")
 const INQ = require("inquirer");
-import main from "./main.js";
 
 
 const mainMenu = async (select) => {
@@ -476,3 +476,5 @@ const deleteDepartment = async()=>{
   }
   await continueMenu();
 }
+
+module.exports = mainMenu;

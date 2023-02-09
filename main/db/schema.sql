@@ -17,7 +17,7 @@ CREATE TABLE role(
   department_id INT NOT NULL,
   PRIMARY KEY(id),
   -- linking department id to this role id
-  FOREIGN KEY(department_id) REFERENCES department(id),
+  FOREIGN KEY(department_id) REFERENCES department(id)
   -- on delete, cascade into table, so this allows deleting items and properties in table not just the entire table
   ON DELETE CASCADE -- this has been causing me errors in workbench see if it works using mysql2
 
@@ -36,7 +36,7 @@ CREATE TABLE employee (
   -- can be referenced with role id(those in specific role, will be accesible by querying that role)
   FOREIGN KEY (role_id) REFERENCES role(id),
   -- can be referend with manager id(those with specific manager, will be accesible by querying that manager id)
-  FOREIGN KEY(manager_id) REFERENCES employee(id),
+  FOREIGN KEY(manager_id) REFERENCES employee(id)
   ON DELETE CASCADE
 
 
