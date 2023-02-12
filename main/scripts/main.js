@@ -1,5 +1,5 @@
-const INQ = require("inquirer");
-import mainMenu from "./terminal"
+import INQ from "inquirer"
+import mainMenu from "./terminal.js"
 
 const selectMenu = async () => {
   const resp = await INQ.prompt([
@@ -71,4 +71,4 @@ const selectMenu = async () => {
   await mainMenu(resp.select);
 };
 
-module.exports = selectMenu;
+export default selectMenu;

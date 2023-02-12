@@ -1,4 +1,4 @@
-import mysql as SQL from "mysql2/promise" 
+import SQL from "mysql2/promise"
 
 //openeing connection to database that will be made
 
@@ -12,4 +12,4 @@ const dbTunnel = SQL.createPool({
   queueLimit:0,
 });
 
-module.exports = {dbTunnel};
+export {dbTunnel};

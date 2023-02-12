@@ -1,10 +1,9 @@
 // import {dbTunnel} from "../db/connect.js";
-const {dbTunnel} = require("../db/connect.js")
-const INQ = require("inquirer");
+import { dbTunnel } from "../db/connect.js";
+import INQ from "inquirer"
 
-
-const mainMenu = async (select) => {
-  switch(select){
+async function mainMenu(select) {
+  switch (select) {
     case "view_all_employees":
       await viewAllEmployees();
       break;
@@ -31,7 +30,7 @@ const mainMenu = async (select) => {
       break;
     case "view_departments":
       await viewDepartments();
-      break; 
+      break;
     case "department_salaries":
       await departmentSalaries();
       break;
@@ -51,7 +50,7 @@ const mainMenu = async (select) => {
       process.kill();
       break;
   }
-};
+}
 
 //function to prompt user to continue in menu
 
@@ -477,4 +476,4 @@ const deleteDepartment = async()=>{
   await continueMenu();
 }
 
-module.exports = mainMenu;
+export default mainMenu;

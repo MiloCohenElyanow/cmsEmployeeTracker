@@ -1,9 +1,9 @@
 //PHAM CONG HELPED ME MAKE THIS WELCOME PAGE WITH FIGLET!!!
-const clear = require("clear");
+import clear from "clear";
+import figlet from "figlet";
 // const selectMenu = require("./scripts/main.js")
 // import selectMenu from "./scripts/main.js"
-const selectMenu = import("./scripts/main.js")
-const figlet = require("figlet")
+import selectMenu from "./scripts/main.js";
 
 
 const welcome = async () =>{
@@ -21,7 +21,6 @@ const welcome = async () =>{
     verticalLayout:"fitted"
   }), "\n");
   console.log("##====================--====================##");
-  return
 };
 
 const init = async ()=> {
